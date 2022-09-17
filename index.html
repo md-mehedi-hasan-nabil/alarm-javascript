@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./assets/alarm.png" />
+    <title>Alarm</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./src/css/styles.css" />
+  </head>
+  <body class="bg-purple-300">
+    <main class="container mx-auto">
+      <div class="clock-container h-40">
+        <div class="clock"></div>
+      </div>
+      <div>
+        <label for="time">Set schedule time in hours: </label> <br />
+        <input id="time" type="number" min="1" max="12" placeholder="12:30" />
+      </div>
+      <div>
+        <button
+          id="btn"
+          class="bg-purple-600 hover:bg-purple-800 text-white px-4 py-2 rounded-lg"
+          type="button"
+        >
+          Set Alarm
+        </button>
+      </div>
+      <div>
+        <button onclick="pause()">Stop</button>
+      </div>
+    </main>
+    <audio>
+      <source src="./assets/musical_alarm.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+
+    <script src="./src/js/main.js"></script>
+  </body>
+</html>
